@@ -1,4 +1,3 @@
-require('../movie-app/app');
 angular.module('movieCore', ['ngResource'])
 	.factory('PopularMovies', function($resource) {
 		var token = 'teddybear'; // TBC

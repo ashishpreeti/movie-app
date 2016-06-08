@@ -1,3 +1,5 @@
+require("Calculator");
+//just trying to require Calculator here.
 angular.module('movieApp', ['ui.bootstrap', 'ngRoute', 'omdb'])
 	.config(function ($routeProvider) {
 	$routeProvider
