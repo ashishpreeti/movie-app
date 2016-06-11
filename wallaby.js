@@ -1,22 +1,26 @@
 var wallabify = require('wallabify');
 var wallabyPostprocessor = wallabify({
-    entryPatterns: [
-        'src/movie-app/app.js'
-    ]
+    // entryPatterns: [
+    //     'src/movie-app/app.js'
+    // ]
 });
 module.exports = function () {
   return {
       "files": [
-          {"pattern": "lib/angular/angular.min.js", "instrument": false},
-          {"pattern": "lib/angular/angular-resource.min.js", "instrument": false},
-          {"pattern": "lib/angular/angular-mocks.js", "instrument": false},
-          {"pattern": "lib/angular/angular-route.min.js", "instrument": false},
-          {"pattern": "lib/bootstrap/ui-bootstrap-tpls.min.js", "instrument": false},
-          "src/**/*.js"
+          {pattern: "lib/angular/angular.min.js", load : false},
+          {pattern: "lib/angular/angular-resource.min.js", load : false},
+          {pattern: "lib/angular/angular-mocks.js", load : false},
+          {pattern: "lib/angular/angular-route.min.js", load : false},
+          {pattern: "lib/bootstrap/ui-bootstrap-tpls.min.js", load : false},
+          {pattern: "src/**/*.js", load : false}
       ],
       "tests": [
-          "spec/**/*.js"
+          {pattern: "spec/**/*.js", load : false}
       ],
-      postprocessor: wallabyPostprocessor
+      postprocessor: wallabyPostprocessor,
+
+      bootstrap: function () {
+          window.__moduleBundler.loadTests();
+      }
   }
 };

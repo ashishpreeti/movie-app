@@ -12,6 +12,7 @@
   "author": "bradoncode",
   "license": "ISC",
   "devDependencies": {
+    "browserify": "^13.0.1",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.9",
     "karma-chrome-launcher": "^0.2.0",
