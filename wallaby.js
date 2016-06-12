@@ -7,11 +7,11 @@ var wallabyPostprocessor = wallabify({
 module.exports = function () {
   return {
       "files": [
-          {pattern: "lib/angular/angular.min.js", load : false},
-          {pattern: "lib/angular/angular-resource.min.js", load : false},
-          {pattern: "lib/angular/angular-mocks.js", load : false},
-          {pattern: "lib/angular/angular-route.min.js", load : false},
-          {pattern: "lib/bootstrap/ui-bootstrap-tpls.min.js", load : false},
+          {pattern: "lib/angular/angular.min.js"},
+          {pattern: "lib/angular/angular-resource.min.js"},
+          {pattern: "lib/angular/angular-mocks.js"},
+          {pattern: "lib/angular/angular-route.min.js"},
+          {pattern: "lib/bootstrap/ui-bootstrap-tpls.min.js"},
           {pattern: "src/**/*.js", load : false}
       ],
       "tests": [
